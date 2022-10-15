@@ -22,13 +22,13 @@ export type HexoLightningCSSConfig = Omit<
    * Browserslist.
    * @see {@link https://github.com/browserslist/browserslist/blob/main/index.d.ts}
    */
-  readonly browserslist?: string | string[]
+  browserslist?: string | string[]
   /**
    * Exclude files.
    * @remarks If using an array, run as `new RegExp(arr[0], arr[1])`
    * @defaultValue `['min.css']`
    */
-  readonly exclude?: (string | [string, string])[]
+  exclude?: (string | [string, string])[]
 }
 ```
 
