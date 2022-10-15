@@ -7,6 +7,11 @@ export type HexoLightningCSSConfig = Omit<
   'filename' | 'code'
 > & {
   /**
+   * Browserslist.
+   * @see {@link https://github.com/browserslist/browserslist/blob/main/index.d.ts}
+   */
+  readonly browserslist?: string | string[]
+  /**
    * Exclude files.
    * @remarks If using an array, run as `new RegExp(arr[0], arr[1])`
    * @defaultValue `['min.css']`
