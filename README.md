@@ -36,8 +36,11 @@ Write into `_config.yml` to override default value.
 
 ```yaml
 lightningcss:
+  browserslist:
+    - defaults and supports es6-module
+    - maintained node versions
   exclude:
-    - 'min.css'
+    - min.css
 ```
 
 ## License
