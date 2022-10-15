@@ -13,7 +13,11 @@ npm i hexo-lightningcss # npm
 ## Config
 
 ```ts
-type HexoLightningCSSConfig = Omit<TransformOptions, 'filename' | 'code'> & {
+/** @see {@link https://github.com/parcel-bundler/lightningcss/blob/master/node/index.d.ts} */
+export type HexoLightningCSSConfig = Omit<
+  TransformOptions,
+  'filename' | 'code'
+> & {
   /**
    * Exclude files.
    * @remarks If using an array, run as `new RegExp(arr[0], arr[1])`
