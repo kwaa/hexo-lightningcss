@@ -12,11 +12,10 @@ export type HexoLightningCSSConfig = Omit<
    */
   browserslist?: string | string[]
   /**
-   * Exclude files.
-   * @remarks If using an array, run as `new RegExp(arr[0], arr[1])`
-   * @defaultValue `['min.css']`
+   * Exclude patterns.
+   * @defaultValue `['*.min.css']`
    */
-  exclude?: (string | [string, string])[]
+  exclude?: string | string[]
 }
 
 declare module 'hexo' {

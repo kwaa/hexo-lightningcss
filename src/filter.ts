@@ -1,6 +1,7 @@
 import type { HexoConfig } from 'hexo'
 import { transform, browserslistToTargets } from 'lightningcss'
 import browserslist from 'browserslist'
+import micromatch from 'micromatch'
 import { basename } from 'node:path'
 
 export function hexoLightningCSS(result: string, data: { path: string }) {
@@ -8,13 +9,14 @@ export function hexoLightningCSS(result: string, data: { path: string }) {
     config: { lightningcss },
   }: { config: HexoConfig } = this
 
+  if (Array.isArray(lightningcss.exclude))
+    lightningcss.exclude = lightningcss.exclude.join('')
+
   if (data.path && lightningcss.exclude)
     if (
-      lightningcss.exclude.some((match) =>
-        match instanceof Array
-          ? new RegExp(...match).test(data.path)
-          : data.path.includes(match)
-      )
+      micromatch.isMatch(data.path, lightningcss.exclude, {
+        basename: lightningcss.exclude.includes('/') ? false : true,
+      })
     )
       return result
 
