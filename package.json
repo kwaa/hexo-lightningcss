@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "browserslist": "^4.21.4",
-    "lightningcss": "^1.16.0"
+    "lightningcss": "^1.16.0",
+    "micromatch": "^4.0.5"
   }
 }
