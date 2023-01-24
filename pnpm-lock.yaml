@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/hexo': ^3.8.8
+  '@types/micromatch': ^4.0.2
   '@types/node': ^18.8.4
   browserslist: ^4.21.4
   lightningcss: ^1.16.0
@@ -15,6 +16,7 @@ dependencies:
 
 devDependencies:
   '@types/hexo': 3.8.8
+  '@types/micromatch': 4.0.2
   '@types/node': 18.8.4
   unbuild: 0.8.11
 
@@ -396,6 +398,10 @@ packages:
     resolution: {integrity: sha512-g2qEd+zkfkTEudA2SrMAeAvY7CrFqtbsLILm2dT2VIeKTqMqVzcdfURlvu6FU3srRgbmXN1Srm94pg34EIehww==}
     dev: true
 
+  /@types/braces/3.0.1:
+    resolution: {integrity: sha512-+euflG6ygo4bn0JHtn4pYqcXwRtLvElQ7/nnjDu7iYG56H0+OhCd7d6Ug0IE3WcFpZozBKW2+80FUbv5QGk5AQ==}
+    dev: true
+
   /@types/bunyan/1.8.8:
     resolution: {integrity: sha512-Cblq+Yydg3u+sGiz2mjHjC5MPmdjY+No4qvHrF+BUhblsmSfMvsHLbOG62tPbonsqBj6sbWv1LHcsoe5Jw+/Ow==}
     dependencies:
@@ -432,6 +438,12 @@ packages:
       '@types/minimist': 1.2.2
       '@types/underscore': 1.11.4
       moment: 2.29.4
+    dev: true
+
+  /@types/micromatch/4.0.2:
+    resolution: {integrity: sha512-oqXqVb0ci19GtH0vOA/U2TmHTcRY9kuZl4mqUxe0QmJAlIW13kzhuK5pi1i9+ngav8FjpSb9FVS/GE00GLX1VA==}
+    dependencies:
+      '@types/braces': 3.0.1
     dev: true
 
   /@types/minimist/1.2.2:
