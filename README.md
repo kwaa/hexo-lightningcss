@@ -43,6 +43,24 @@ lightningcss:
     - min.css
 ```
 
+### Migrating from [`hexo-autoprefixer`](https://npmjs.com/package/hexo-autoprefixer)
+
+This plugin is compatible with hexo-autoprefixer configuration, no changes are needed.
+
+But if you want, you can also change to the new format:
+
+```diff
+- autoprefixer:
++ lightningcss:
+    exclude:
+      - '*.min.css'
+-   browsers:
++   browserslist:
+      - 'last 2 versions'
+```
+
+Browserlist may need to be put into a configuration file `_config.yml`, not `package.json` or `.browserslistrc`.
+
 ## License
 
 Licensed under the [WTFPL](http://www.wtfpl.net), See the [COPYING](COPYING) file for more details.

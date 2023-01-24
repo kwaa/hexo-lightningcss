@@ -18,9 +18,15 @@ export type HexoLightningCSSConfig = Omit<
   exclude?: string | string[]
 }
 
+type HexoAutoprefixerConfig = {
+  exclude?: HexoLightningCSSConfig['exclude']
+  browsers?: HexoLightningCSSConfig['browserslist']
+}
+
 declare module 'hexo' {
   export interface HexoConfig {
     readonly lightningcss: HexoLightningCSSConfig
+    readonly autoprefixer?: HexoAutoprefixerConfig
   }
 }
 

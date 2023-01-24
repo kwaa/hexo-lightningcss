@@ -5,9 +5,16 @@ import micromatch from 'micromatch'
 import { basename } from 'node:path'
 
 export function hexoLightningCSS(result: string, data: { path: string }) {
-  const {
-    config: { lightningcss },
+  let {
+    config: { lightningcss, autoprefixer },
   }: { config: HexoConfig } = this
+
+  if (autoprefixer)
+    lightningcss = {
+      ...lightningcss,
+      exclude: autoprefixer.exclude,
+      browserslist: autoprefixer.browsers,
+    }
 
   if (Array.isArray(lightningcss.exclude))
     lightningcss.exclude = lightningcss.exclude.join('')
